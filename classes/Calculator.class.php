@@ -22,10 +22,10 @@ class Calculator {
         if (isset($_GET['factors'])){
 
             $factors = explode('x', $_GET['factors']);
+
             //Get factors from GET global
             $this->factor1 = $factors[0];
             $this->factor2 = $factors[1];
-
 
             //Set result by multiplying factors from table
             $this->result = (int)$this->factor1 * (int)$this->factor2;
@@ -35,6 +35,7 @@ class Calculator {
 
     //Add factors, operation and result in Database
     public function addToDB(){
+
         //SQL query
         $this->db->query('INSERT INTO results (factor1, factor2, operation, result) VALUES (:factor1, :factor2, :operation, :result)');
 
@@ -48,7 +49,7 @@ class Calculator {
         $this->db->execute();
     }
 
-
+    //Return data
     public function getData(){
         return array($this->factor1, $this->factor2, $this->operation, $this->result);
     }
