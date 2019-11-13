@@ -27,7 +27,7 @@ if(isset($_GET['factors'])){
     $cal = new Calculator();
     $cal->addToDB();
 
-    //Insert this in div with id expresion if GET request is sent
+    //Insert this in div with id results if GET request is sent
     echo "<small>Factor 1 = {$cal->getData()[0]} &emsp;
                  Factor 2 = {$cal->getData()[1]} &emsp; 
                  Operation = {$cal->getData()[2]} (multiply) &emsp; 
