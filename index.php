@@ -22,11 +22,19 @@ require_once 'classes/Database.class.php';
 
 //Check if GET request is sent
 if(isset($_GET['factors'])){
+
+    //Instantiate Calculator class and add data to Database
     $cal = new Calculator();
     $cal->addToDB();
-    echo "<small>Factor 1 = {$cal->getData()[0]} &emsp; Factor 2 = {$cal->getData()[1]} &emsp; Operation = {$cal->getData()[2]} (multiply) &emsp; Result = {$cal->getData()[3]}</small><br>
-<h3>Expresion: {$cal->getData()[0]} x {$cal->getData()[1]}</h3>
-<h2>Result: {$cal->getData()[3]}</h2>";
+
+    //Insert this in div with id expresion if GET request is sent
+    echo "<small>Factor 1 = {$cal->getData()[0]} &emsp;
+                 Factor 2 = {$cal->getData()[1]} &emsp; 
+                 Operation = {$cal->getData()[2]} (multiply) &emsp; 
+                 Result = {$cal->getData()[3]}</small><br>
+             <h3>Expresion: {$cal->getData()[0]} x {$cal->getData()[1]}</h3>
+             <h2>Result: {$cal->getData()[3]}</h2>";
+
 } else { ?>
     <h1>Calculator</h1>
     <!-- Generating Table -->
@@ -51,6 +59,8 @@ if(isset($_GET['factors'])){
         <?php endfor; ?>
     </table>
     </div>
+
+    <!-- Results -->
     <div class="container" id="expresion">
 
     </div>

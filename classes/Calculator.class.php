@@ -42,6 +42,7 @@ class Calculator {
         $this->db->execute();
     }
 
+
     public function getData(){
         return array($this->factor1, $this->factor2, $this->operation, $this->result);
     }
