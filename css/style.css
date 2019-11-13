@@ -1,0 +1,30 @@
+body{
+    height: 100vh;
+    text-align: center;
+
+}
+
+td{
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+}
+
+td:hover{
+    padding: 4px;
+    border: 1px solid red;
+}
+
+
+th{
+    border: 2px solid black;
+}
+
+table{
+    margin: 2% auto;
+    min-width: 650px;
+}
+
+.container{
+    width: 100%;
+}
