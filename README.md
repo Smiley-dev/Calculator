@@ -1,3 +1,3 @@
 # Calculator
 
-My solution to the project assiggment I was given as part of hiring process.
+My solution to the project assignment I was given as part of the hiring process.
