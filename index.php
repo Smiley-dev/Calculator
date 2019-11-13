@@ -61,7 +61,7 @@ if(isset($_GET['factors'])){
     </div>
 
     <!-- Results -->
-    <div class="container" id="expresion">
+    <div class="container" id="results">
 
     </div>
 <?php } ?>
