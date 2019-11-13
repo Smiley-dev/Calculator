@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * Calculator class
+ * Getting data from request
+ * Adding data to Database
+ */
+
 class Calculator {
 
     private $db;
