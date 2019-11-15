@@ -26,20 +26,7 @@ if(isset($_GET['factors'])){
     
 } else { ?>
 
-<<<<<<< HEAD
-=======
-    //Instantiate Calculator class and add data to Database
-    $cal = new Calculator();
-    $cal->addToDB();
 
-    //Insert this in div with id results if GET request is sent
-    echo "<small>Factor 1 = {$cal->getData()[0]} &emsp;
-                 Factor 2 = {$cal->getData()[1]} &emsp; 
-                 Operation = {$cal->getData()[2]} (multiply) &emsp; 
-                 Result = {$cal->getData()[3]}</small><br>
-             <h3>Expresion: {$cal->getData()[0]} x {$cal->getData()[1]}</h3>
-             <h2>Result: {$cal->getData()[3]}</h2>";
->>>>>>> f570cf85efff07a3b2c6e21194ef04815be39950
 
     <h1>Calculator</h1>
     <!-- Generating Table -->
