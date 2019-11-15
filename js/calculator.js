@@ -5,8 +5,8 @@ function sendRequest(factors){
 
     var xhttp = new XMLHttpRequest();
     //Send request
-    xhttp.open("GET", "index.php?factors=" + factors, true);
-    xhttp.send();
+    //xhttp.open("GET", "=" + factors, true);
+    //xhttp.send();
 
     xhttp.onreadystatechange = function() {
         if(this.readyState == 4 && this.status == 200){

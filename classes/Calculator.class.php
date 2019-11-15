@@ -29,9 +29,25 @@ class Calculator {
 
             //Set result by multiplying factors from table
             $this->result = (int)$this->factor1 * (int)$this->factor2;
+
+
+            $this->addToDB();
+            $this->printResult();
+
+
         }
+
     }
 
+    public function printResult(){
+        //Insert this in div with id expresion if GET request is sent
+        echo "<small>Factor 1 = {$this->factor1} &emsp;
+                 Factor 2 = {$this->factor2} &emsp; 
+                 Operation = {$this->operation} (multiply) &emsp; 
+                 Result = {$this->result}</small><br>
+             <h3>Expresion: {$this->factor1} x {$this->factor1}</h3>
+             <h2>Result: {$this->result}</h2>";
+    }
 
     //Add factors, operation and result in Database
     public function addToDB(){
@@ -49,8 +65,5 @@ class Calculator {
         $this->db->execute();
     }
 
-    //Return data
-    public function getData(){
-        return array($this->factor1, $this->factor2, $this->operation, $this->result);
-    }
+
 }
