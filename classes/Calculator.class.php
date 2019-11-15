@@ -3,6 +3,7 @@
 /*
  * Calculator class
  * Getting data from request
+ * Printing results
  * Adding data to Database
  */
 
@@ -38,8 +39,9 @@ class Calculator {
         }
 
     }
-
+    
     public function printResult(){
+        
         //Insert this in div with id expresion if GET request is sent
         echo "<small>Factor 1 = {$this->factor1} &emsp;
                  Factor 2 = {$this->factor2} &emsp; 
